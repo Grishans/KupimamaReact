@@ -1,0 +1,9 @@
+section.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1 1 auto;
+  .cont_wrap {
+    width: 90%;
+  }
+}
