@@ -26,7 +26,12 @@ html {
 body {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  min-height: 100vh;
+}
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 .fn_cop_mobil {
   display: none;
@@ -34,11 +39,12 @@ body {
 p,
 span,
 a,
-input {
+input,
+label {
   font-weight: 400;
   font-size: 24px;
   text-decoration: none;
-  color: #fff;
+  color: #000;
   margin: 0;
   padding: 0;
 }
@@ -107,34 +113,7 @@ section.content {
   color: gold;
   text-shadow: 1px 1px #c60;
 }
-.mcp_box_btn {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  a {
-    color: $main_color;
-    text-decoration: underline;
-    font-size: 20px;
-  }
-  form {
-    button {
-      color: #fff;
-      background: #f68f30;
-      border: none;
-      border-radius: 30px;
-      padding: 8px 15px;
-      transition: 0.3s;
-      border: 1px solid #f68f30;
-    }
-    button:hover {
-      cursor: pointer;
-      color: #f68f30;
-      background: #fff;
-      border: 1px solid #f68f30;
-    }
-  }
-}
+
 .mcpbt_stock {
   position: absolute;
   display: flex;
@@ -218,115 +197,6 @@ section.content {
         flex-wrap: wrap;
         justify-content: space-between;
         margin-top: 50px;
-        .mcp_box {
-          position: relative;
-          display: flex;
-          flex-direction: column;
-          align-items: center;
-          width: 30%;
-          border: 2px solid $second_main_color;
-          border-radius: 30px;
-          padding: 10px;
-          margin-bottom: 20px;
-          /* margin-right: 5px;
-          margin-left: 5px; */
-          img {
-            width: 200px;
-            height: 200px;
-            margin-top: 20px;
-          }
-          hr {
-            border: 1px solid $main_color;
-            width: 80%;
-            margin-bottom: 0;
-          }
-          .mcp_box_text {
-            width: 90%;
-            // background: #ccedfa;
-            margin: 10px;
-            padding: 10px;
-            p {
-              color: #fff;
-            }
-            p.title {
-              color: $main_color;
-              font-size: 25px;
-              margin-bottom: 20px;
-            }
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            .mcpbt_text {
-              display: flex;
-              justify-content: space-between;
-              width: 100%;
-              padding: 0 10px 0 20px;
-              .mcpbt_descript {
-                width: 60%;
-                font-weight: 600;
-                ul {
-                  list-style: none;
-                  padding: 0;
-                  margin: 0;
-                  li::before {
-                    content: "-";
-                    color: #000;
-                    margin-right: 5px;
-                  }
-                }
-              }
-              .mcpbt_price {
-                display: flex;
-                flex-direction: column;
-                width: 40%;
-                p {
-                  font-weight: 600;
-                }
-                padding: 5px 10px;
-                p.old_price {
-                  align-self: center;
-                  font-size: 12px;
-                  color: #af0513;
-                  text-decoration: line-through;
-                }
-                p.price {
-                  align-self: flex-start;
-                  font-size: 20px;
-                  color: $main_color;
-                  color: red;
-                }
-                p.price_title_off {
-                  align-self: flex-end;
-                  font-size: 12px;
-                  color: $second_main_color;
-                }
-                p.price_title_on {
-                  align-self: flex-end;
-                  font-size: 14px;
-                  color: $second_main_color;
-                }
-              }
-            }
-          }
-        }
-      }
-      .next_page {
-        margin: 20px 0 0;
-        text-align: center;
-        a {
-          font-size: 18px;
-          font-weight: 700;
-          color: $second_main_color;
-        }
-        a:hover {
-          color: $color;
-        }
-        a.np_arrow_perw::before {
-          content: "<";
-        }
-        a.np_arrow_next::before {
-          content: ">";
-        }
       }
     }
     .warranty_content {
@@ -760,63 +630,74 @@ section.content {
       display: flex;
       align-items: center;
       flex-direction: column;
-      form {
+      #register {
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 50px;
-        input {
-          border: 2px solid $main_color;
-          color: #7a7a7a;
-          font-size: 22px;
-          width: 100%;
-          margin-bottom: 20px;
+        justify-content: center;
+        flex-wrap: wrap;
+      }
+      span {
+        color: #000;
+      }
+      .ant-form-item-control-input {
+        span.ant-input-group-addon {
           height: 40px;
-          padding-left: 10px;
         }
-        .inp_low {
-          width: 40%;
-          margin-right: 80px;
-        }
-        .reg_inf {
-          background: $second_main_color;
-          border-radius: 20px;
-          padding: 10px 80px 30px 80px;
-          p.reg_title {
-            font-size: 38px;
-            text-align: center;
-          }
-          p {
-            color: #fff;
-          }
-        }
-        .reg_check {
-          display: flex;
-          margin-top: 20px;
-          input {
-            width: 20px;
-            height: 20px;
-            margin-right: 10px;
-          }
-          label {
-            color: $second_main_color;
-          }
-        }
-        button {
-          width: 400px;
-          height: 60px;
-          background: $second_main_color;
-          border: 2px solid $second_main_color;
-          border-radius: 30px;
-          color: #fff;
+      }
+
+      input {
+        border: 2px solid $main_color;
+        color: #7a7a7a;
+        font-size: 22px;
+        width: 100%;
+        margin-bottom: 20px;
+        height: 40px;
+        padding-left: 10px;
+      }
+      .inp_low {
+        width: 40%;
+        margin-right: 80px;
+      }
+      .inp_normal {
+        width: 100%;
+      }
+      .reg_inf {
+        background: $second_main_color;
+        border-radius: 20px;
+        padding: 10px 80px 30px 80px;
+        p.reg_title {
           font-size: 38px;
-          transition: 0.3s;
+          text-align: center;
         }
-        button:hover {
-          cursor: pointer;
-          background: #fff;
+        p {
+          color: #fff;
+        }
+      }
+      .reg_check {
+        display: flex;
+        margin-top: 20px;
+        input {
+          width: 20px;
+          height: 20px;
+          margin-right: 10px;
+        }
+        label {
           color: $second_main_color;
         }
+      }
+      button {
+        width: 400px;
+        height: 60px;
+        background: $second_main_color;
+        border: 2px solid $second_main_color;
+        border-radius: 30px;
+        color: #fff;
+        font-size: 38px;
+        transition: 0.3s;
+      }
+      button:hover {
+        cursor: pointer;
+        background: #fff;
+        color: $second_main_color;
       }
     }
     .productPage_content {

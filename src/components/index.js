@@ -4,3 +4,5 @@ export { default as SectionWrap } from "./SectionWrap";
 export { default as Slider } from "./Slider";
 export { default as MainFilter } from "./MainFilter";
 export { default as MainNav } from "./MainNav";
+export { default as ProductBox } from "./ProductBox";
+export { default as Pagination } from "./Pagination";

@@ -1,24 +1,27 @@
 import React from "react";
 import { MainNav } from "../../components";
 
+import { Link } from "react-router-dom";
+
 import "./style.scss";
 const Header = () => {
   return (
     <header>
       <div className="topNav">
-        <a href="sale.html">Распродажа</a>
-        <a href="delivery.html">Доставка и оплата</a>
-        <a href="warranty.html">Гарантия</a>
-        <a href="contacts.html">Контакты</a>
+        <Link to="sale">Распродажа</Link>
+        {/* <a href="sale.html">Распродажа</a> */}
+        <Link to="delivery">Доставка и оплата</Link>
+        <Link to="warranty">Гарантии</Link>
+        <Link to="contacts">Контакты</Link>
         <a href="#/">Магазины</a>
       </div>
 
       <div className="headers">
         <div className="headers_logo">
-          <a href="index.html">
+          <Link to="/">
             <img src="img/logo.jpg" alt="Логотип" />
             <p>МИР ДЕТСТВА!</p>
-          </a>
+          </Link>
         </div>
 
         <div className="headers_contacts">
@@ -37,8 +40,8 @@ const Header = () => {
         </div>
 
         <div className="headers_input">
-          <a href="input.html">Войти</a>
-          <a href="registration.html">Регистрация</a>
+          <Link to="input">Войти</Link>
+          <Link to="registration">Регистрация</Link>
         </div>
 
         <div className="headers_account">

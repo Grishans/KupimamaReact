@@ -81,16 +81,23 @@ header {
       }
     }
     .headers_input {
-      display: none;
+      display: flex;
       a {
         margin-right: 40px;
+        transition: 0.3s;
+        &:hover {
+          color: #fff;
+          text-decoration: underline;
+          transition: 0.3s;
+        }
       }
+
       a:last-child {
         margin-right: 0;
       }
     }
     .headers_account {
-      display: flex;
+      display: none;
       justify-content: space-between;
       align-items: flex-end;
       a {

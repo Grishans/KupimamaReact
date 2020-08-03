@@ -2,7 +2,8 @@ import React from "react";
 import "./style.scss";
 
 const MainNav = () => {
-  const toogleRef = React.useRef();
+  const toogleRef = React.useRef(null);
+  const buttRef = React.useRef(null);
   const [togleView, setTogleView] = React.useState(null);
   const filterType = [
     "Гигиена и уход",
@@ -16,30 +17,28 @@ const MainNav = () => {
     "Спорт и отдых",
     "Ещё",
   ];
+  const menuToogle = React.useCallback((e) => {
+    if (
+      !e.path.includes(toogleRef.current) &&
+      !e.path.includes(buttRef.current)
+    ) {
+      setTogleView(null);
+    }
+  }, []);
   React.useEffect(() => {
-    // document.body.onmouseover = (e) => {
-    //   if (!e.path.includes(toogleRef.current)) {
-    //     setTogleView(null);
-    //   }
-    // };
-    document.body.addEventListener("mouseout", (e) => {
-      if (!e.path.includes(toogleRef.current)) {
-        console.log("object", toogleRef.current);
-        setTogleView(null);
-      }
-    });
-  }, [toogleRef]);
+    document.querySelector("body").addEventListener("mouseover", menuToogle);
+    return () =>
+      document
+        .querySelector("body")
+        .removeEventListener("mouseover", menuToogle);
+  }, [menuToogle]);
   return (
     <div className="nav">
       <div className="nav_wrap">
-        <ul>
+        <ul ref={buttRef}>
           {filterType &&
             filterType.map((item, index) => (
-              <li
-                key={index}
-                onMouseEnter={() => setTogleView(index)}
-                // onMouseLeave={() => setTogleView(null)}
-              >
+              <li key={index} onMouseEnter={() => setTogleView(index)}>
                 {item}
               </li>
             ))}

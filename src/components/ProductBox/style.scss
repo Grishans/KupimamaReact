@@ -1,0 +1,123 @@
+@import "../../vars";
+
+.mc_products {
+  .mcp_box {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    border: 2px solid $second_main_color;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 20px;
+    /* margin-right: 5px;
+          margin-left: 5px; */
+    img {
+      width: 200px;
+      height: 200px;
+      margin-top: 20px;
+    }
+    hr {
+      border: 1px solid $main_color;
+      width: 80%;
+      margin-bottom: 0;
+    }
+    .mcp_box_text {
+      width: 90%;
+      // background: #ccedfa;
+      margin: 10px;
+      padding: 10px;
+      p {
+        color: #fff;
+      }
+      p.title {
+        color: $main_color;
+        font-size: 24px;
+        margin-bottom: 20px;
+      }
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      .mcpbt_text {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        padding: 0;
+        .mcpbt_descript {
+          width: 60%;
+          font-weight: 600;
+          ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li::before {
+              content: "-";
+              color: #000;
+              margin-right: 5px;
+            }
+          }
+        }
+        .mcpbt_price {
+          display: flex;
+          flex-direction: column;
+          width: 40%;
+          p {
+            font-weight: 600;
+          }
+          padding: 5px 10px;
+          p.old_price {
+            align-self: center;
+            font-size: 12px;
+            color: #af0513;
+            text-decoration: line-through;
+          }
+          p.price {
+            align-self: flex-start;
+            font-size: 20px;
+            color: $main_color;
+            color: red;
+          }
+          p.price_title_off {
+            align-self: flex-end;
+            font-size: 12px;
+            color: $second_main_color;
+          }
+          p.price_title_on {
+            align-self: flex-end;
+            font-size: 14px;
+            color: $second_main_color;
+          }
+        }
+      }
+      .mcp_box_btn {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 100%;
+        a {
+          color: $main_color;
+          text-decoration: underline;
+          font-size: 16px;
+        }
+        form {
+          button {
+            color: #fff;
+            background: #f68f30;
+            border: none;
+            border-radius: 30px;
+            padding: 8px 15px;
+            transition: 0.3s;
+            border: 1px solid #f68f30;
+          }
+          button:hover {
+            cursor: pointer;
+            color: #f68f30;
+            background: #fff;
+            border: 1px solid #f68f30;
+          }
+        }
+      }
+    }
+  }
+}

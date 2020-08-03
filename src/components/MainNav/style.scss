@@ -60,11 +60,12 @@
     .nav_toogle {
       display: flex;
       position: absolute;
-      top: 82px;
+      top: 70px;
+      padding-top: 10px;
       left: 0;
       background: #fff;
       width: 100%;
-      z-index: 999;
+      z-index: 9999;
       .nt_wrap {
         display: flex;
         flex-wrap: wrap;
