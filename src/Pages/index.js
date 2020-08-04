@@ -5,3 +5,7 @@ export { default as Warranty } from "./Warranty";
 export { default as Contacts } from "./Contacts";
 export { default as Input } from "./Input";
 export { default as Registration } from "./Registration";
+export { default as PersonalArea } from "./PersonalArea";
+export { default as MyPurchases } from "./MyPurchases";
+export { default as Basket } from "./Basket";
+export { default as EditProfile } from "./EditProfile";

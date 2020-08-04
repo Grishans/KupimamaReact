@@ -45,11 +45,11 @@ const Header = () => {
         </div>
 
         <div className="headers_account">
-          <a href="basket.html" className="backet">
+          <Link to="basket" className={"basket"}>
             <i className="fa fa-shopping-basket" aria-hidden="true"></i>
             <p>12000p.</p>
-          </a>
-          <a href="personal_area.html">Иванченко Григорий</a>
+          </Link>
+          <Link to="personalArea">Иванченко Григорий</Link>
           {/* <a href="#/" className="paOut"><i className="fa fa-sign-out fa-2x aria-hidden="true"></i></a> */}
         </div>
       </div>

@@ -81,7 +81,7 @@ header {
       }
     }
     .headers_input {
-      display: flex;
+      display: none;
       a {
         margin-right: 40px;
         transition: 0.3s;
@@ -97,7 +97,7 @@ header {
       }
     }
     .headers_account {
-      display: none;
+      display: flex;
       justify-content: space-between;
       align-items: flex-end;
       a {

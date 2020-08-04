@@ -6,3 +6,4 @@ export { default as MainFilter } from "./MainFilter";
 export { default as MainNav } from "./MainNav";
 export { default as ProductBox } from "./ProductBox";
 export { default as Pagination } from "./Pagination";
+export { default as Forms } from "./Forms";

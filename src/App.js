@@ -8,6 +8,10 @@ import {
   Contacts,
   Input,
   Registration,
+  PersonalArea,
+  MyPurchases,
+  Basket,
+  EditProfile,
 } from "./Pages";
 import { Switch, Route } from "react-router-dom";
 
@@ -22,6 +26,10 @@ function App() {
         <Route exact path="/contacts" component={Contacts} />
         <Route exact path="/input" component={Input} />
         <Route exact path="/registration" component={Registration} />
+        <Route exact path="/personalArea" component={PersonalArea} />
+        <Route exact path="/myPurchases" component={MyPurchases} />
+        <Route exact path="/basket" component={Basket} />
+        <Route exact path="/editProfile" component={EditProfile} />
       </Switch>
     </>
   );

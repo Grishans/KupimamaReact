@@ -381,7 +381,6 @@ section.content {
               font-size: 18px;
             }
             a:hover {
-              color: $main_color;
               background: #fff;
             }
             .input-number {
@@ -431,6 +430,27 @@ section.content {
               color: #fff;
             }
           }
+          td {
+            color: $main_color;
+            font-size: 18px;
+            a {
+              border: 1px solid $main_color;
+              background: $main_color;
+              padding: 8px 15px;
+              border-radius: 30px;
+              color: #fff;
+              transition: 0.3s;
+              font-size: 18px;
+            }
+            a:hover {
+              background: #fff;
+              color: $main_color;
+            }
+            input {
+              color: $main_color;
+              font-size: 18px;
+            }
+          }
         }
       }
       .pc_deliver {
@@ -459,6 +479,20 @@ section.content {
             width: 60%;
             p {
               color: $main_color;
+            }
+            button.ant-dropdown-link {
+              position: relative;
+              align-self: flex-start;
+              margin-top: 10px;
+              width: 200px;
+              font-size: 22px;
+              outline: none;
+              span.anticon-down {
+                font-size: 15px;
+                position: absolute;
+                right: 10px;
+                top: 40%;
+              }
             }
             form {
               height: 80px;
@@ -632,15 +666,42 @@ section.content {
       flex-direction: column;
       #register {
         display: flex;
-        justify-content: center;
+        justify-content: flex-start;
         flex-wrap: wrap;
       }
       span {
-        color: #000;
+        color: $second_main_color;
       }
-      .ant-form-item-control-input {
-        span.ant-input-group-addon {
-          height: 40px;
+      .ant-form-item-control {
+        max-width: 100%;
+        .ant-form-item-control-input {
+          width: 100%;
+          span.ant-input-group-addon {
+            height: 40px;
+          }
+          .ant-picker {
+            width: 100%;
+            padding: 0;
+            border: none;
+          }
+          span.ant-input-password {
+            padding: 0;
+            border: 0;
+          }
+          span.ant-picker-suffix,
+          .ant-input-suffix {
+            position: absolute;
+            right: 10px;
+            top: 10%;
+            span.anticon-calendar {
+              color: $second_main_color;
+            }
+          }
+          span.ant-form-item-children-icon {
+            position: absolute;
+            right: -35px;
+            top: 30%;
+          }
         }
       }
 
@@ -674,6 +735,8 @@ section.content {
       }
       .reg_check {
         display: flex;
+        flex-wrap: wrap;
+        width: 400px;
         margin-top: 20px;
         input {
           width: 20px;
@@ -682,6 +745,8 @@ section.content {
         }
         label {
           color: $second_main_color;
+          font-size: 20px;
+          line-height: 1;
         }
       }
       button {
@@ -697,6 +762,9 @@ section.content {
       button:hover {
         cursor: pointer;
         background: #fff;
+        color: $second_main_color;
+      }
+      button:hover p {
         color: $second_main_color;
       }
     }
@@ -1026,6 +1094,19 @@ section.content {
     .input_content {
       display: flex;
       flex-direction: column;
+      .ant-form-item-control-input {
+        width: 300px;
+        .ant-form-item-control-input-content {
+          height: 40px;
+          input {
+            height: 38px;
+          }
+          span.ant-input-password {
+            height: 40px;
+            padding: 0 11px;
+          }
+        }
+      }
       p {
         color: $second_main_color;
         text-align: center;
