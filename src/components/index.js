@@ -7,3 +7,5 @@ export { default as MainNav } from "./MainNav";
 export { default as ProductBox } from "./ProductBox";
 export { default as Pagination } from "./Pagination";
 export { default as Forms } from "./Forms";
+export { default as FeedBackForm } from "./FeedBackForm";
+export { default as TwiceSlider } from "./TwiceSlider";

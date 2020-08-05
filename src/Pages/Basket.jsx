@@ -3,6 +3,8 @@ import React from "react";
 import { Table, Space, InputNumber, Menu, Dropdown } from "antd";
 import { DownOutlined } from "@ant-design/icons";
 
+import { Link } from "react-router-dom";
+
 import { Headers, Footer, SectionWrap } from "../components";
 
 const Basket = () => {
@@ -14,16 +16,24 @@ const Basket = () => {
       title: "№",
       dataIndex: "number",
       key: "number",
+      align: "center",
     },
     {
       title: "Фото",
       dataIndex: "photo",
       key: "photo",
+      align: "center",
+      render: () => (
+        <Space>
+          <img src="img/stroller.jpg" alt="" />
+        </Space>
+      ),
     },
     {
       title: "Количество",
       dataIndex: "quantity",
       key: "quantity",
+      align: "center",
       render: () => (
         <Space>
           <InputNumber
@@ -39,21 +49,25 @@ const Basket = () => {
       title: "Цена за шт.",
       dataIndex: "price",
       key: "price",
+      align: "center",
     },
     {
       title: "Название товара",
       dataIndex: "name",
       key: "name",
+      align: "center",
     },
     {
       title: "Суммарная стоимость",
       dataIndex: "sumPrice",
       key: "sumPrice",
+      align: "center",
     },
     {
       title: "",
       dataIndex: "btn",
       key: "btn",
+      align: "right",
       render: () => (
         <Space size="middle">
           <a href="#">Отмена</a>
@@ -65,7 +79,6 @@ const Basket = () => {
   const data = [
     {
       number: "1",
-      photo: "Photo",
 
       price: "12000 р.",
       name: "Коляска",
@@ -73,7 +86,6 @@ const Basket = () => {
     },
     {
       number: "2",
-      photo: "Photo",
 
       price: "12000 р.",
       name: "Коляска",
@@ -81,7 +93,6 @@ const Basket = () => {
     },
     {
       number: "3",
-      photo: "Photo",
 
       price: "12000 р.",
       name: "Коляска",
@@ -90,7 +101,7 @@ const Basket = () => {
   ];
 
   const [filtered, setFiltered] = React.useState("");
-  const [sorted, setSorted] = React.useState("");
+  const [sorted, setSorted] = React.useState("Доставка");
 
   const filter_out = (e) => {
     setFiltered(e);
@@ -147,21 +158,25 @@ const Basket = () => {
                   </button>
                 </Dropdown>
 
-                <label for="adress">Адресс доставки:</label>
-                <input
-                  type="text"
-                  id="adress"
-                  placeholder="Адресс"
-                  className="inpAdress"
-                />
+                {sorted === "Доставка" && (
+                  <>
+                    <label htmlFor="adress">Адресс доставки:</label>
+                    <input
+                      type="text"
+                      id="adress"
+                      placeholder="Адресс"
+                      className="inpAdress"
+                    />
+                  </>
+                )}
               </div>
             </div>
 
             <button type="button">Оплатить</button>
 
             <div className="pcd_opt">
-              <a href="#">Для оптовых закупок</a>
-              <a href="#">Позникли вопросы?</a>
+              <Link to="feedbackOpt">Для оптовых закупок</Link>
+              <Link to="feedbackForm">Возникли вопросы?</Link>
             </div>
           </div>
         </div>

@@ -2,6 +2,8 @@ import React from "react";
 import PropTypes from "prop-types";
 import "./style.scss";
 
+import { Link } from "react-router-dom";
+
 const ProductBox = ({ sale }) => {
   return (
     <div className="mcp_box">
@@ -45,9 +47,7 @@ const ProductBox = ({ sale }) => {
           <span></span>
         </div>
         <div className="mcp_box_btn">
-          <a rel="noopener noreferrer" href="productPage.html">
-            ПОДРОБНЕЕ
-          </a>
+          <Link to="productPage/2">ПОДРОБНЕЕ</Link>
           <form action="" method="POST">
             <button type="submit">Добавить в корзину</button>
           </form>

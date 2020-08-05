@@ -5,21 +5,29 @@ import { Link } from "react-router-dom";
 
 import "./style.scss";
 const Header = () => {
+  React.useEffect(() => {
+    window.scrollTo(0, 0);
+    console.log("Хедер смонтировался");
+    return () => {
+      window.scrollTo(0, 0);
+      console.log("Компонент будет размантирован");
+    };
+  }, []);
   return (
     <header>
       <div className="topNav">
-        <Link to="sale">Распродажа</Link>
+        <Link to="/sale">Распродажа</Link>
         {/* <a href="sale.html">Распродажа</a> */}
-        <Link to="delivery">Доставка и оплата</Link>
-        <Link to="warranty">Гарантии</Link>
-        <Link to="contacts">Контакты</Link>
-        <a href="#/">Магазины</a>
+        <Link to="/delivery">Доставка и оплата</Link>
+        <Link to="/warranty">Гарантии</Link>
+        <Link to="/contacts">Контакты</Link>
+        <Link to="/shops">Магазины</Link>
       </div>
 
       <div className="headers">
         <div className="headers_logo">
           <Link to="/">
-            <img src="img/logo.jpg" alt="Логотип" />
+            <img src="../img/logo.jpg" alt="Логотип" />
             <p>МИР ДЕТСТВА!</p>
           </Link>
         </div>

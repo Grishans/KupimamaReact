@@ -102,14 +102,7 @@ header {
       align-items: flex-end;
       a {
         margin: 0;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-      a.paOut {
-        margin-left: 10px;
-      }
-      a.backet {
+        transition: 0.3s;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -117,6 +110,16 @@ header {
         p {
           font-size: 12px;
         }
+      }
+      a:hover {
+        text-decoration: underline;
+        color: #fff;
+        i {
+          color: #fff;
+        }
+      }
+      a.paOut {
+        margin-left: 10px;
       }
     }
   }

@@ -141,52 +141,9 @@ section.content {
       font-weight: 700;
       font-size: 50px;
       align-self: center;
-      margin-bottom: 60px;
+      margin-bottom: 30px;
       color: $second_main_color;
     }
-
-    // .slider{
-    //   position: relative;
-    //   display: flex;
-    //   width: 100%;
-    //   justify-content: center;
-    //   .single-slide{
-    //     width: 100%;
-    //     img{
-    //       width: 100%;
-    //       height: fit-content;
-    //       object-fit: contain;
-    //     }
-    //   }
-    //   .slick_slider-arrow_first{
-    //     position: absolute;
-    //     bottom: 30px;
-    //     width: 100%;
-    //     .slick_left{
-    //       position: absolute;
-    //       opacity: 0.6;
-    //       transition: 0.3s;
-    //     }
-    //     .slick_left:hover{
-    //       opacity: 1;
-    //       cursor: pointer;
-    //     }
-    //     .slick_right{
-    //       position: absolute;
-    //       opacity: 0.6;
-    //       transition: 0.3s;
-    //       right: 0;
-    //     }
-    //     .slick_right:hover{
-    //       opacity: 1;
-    //       cursor: pointer;
-    //     }
-    //   }
-    //   .slick-dots li button:before{
-    //     font-size: 65px;
-    //     color: $second_main_color;
-    //   }
-    // }
     .main_content {
       margin-top: 50px;
       border-top: 1px solid $main_color;
@@ -265,6 +222,21 @@ section.content {
       flex-direction: column;
       align-items: center;
       margin-top: 30px;
+      .cc_text {
+        margin-bottom: 30px;
+        text-align: center;
+        p {
+          color: $second_main_color;
+          font-size: 30px;
+
+          span {
+            color: $second_main_color;
+            font-weight: 600;
+            margin-right: 10px;
+            font-size: 30px;
+          }
+        }
+      }
       .cc_box {
         display: flex;
         justify-content: space-between;
@@ -449,6 +421,10 @@ section.content {
             input {
               color: $main_color;
               font-size: 18px;
+            }
+            img {
+              width: auto;
+              height: 100px;
             }
           }
         }
@@ -1047,50 +1023,7 @@ section.content {
         }
       }
     }
-    .feedbackForm_content {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      margin-bottom: 50px;
-      form {
-        display: flex;
-        flex-direction: column;
-        width: 90%;
-        input,
-        textarea {
-          border: 1px solid $second_main_color;
-          border-radius: 30px;
-          padding: 10px 20px;
-          margin-bottom: 15px;
-          font-size: 22px;
-          resize: none;
-          color: #000;
-        }
-        input:focus {
-          outline: none;
-        }
-        textarea:focus {
-          outline: none;
-        }
-        button {
-          border: 1px solid $second_main_color;
-          border-radius: 30px;
-          background: $second_main_color;
-          padding: 10px 20px;
-          width: 200px;
-          height: 50px;
-          color: #fff;
-          transition: 0.3s;
-          align-self: center;
-          outline: none;
-        }
-        button:hover {
-          cursor: pointer;
-          background: #fff;
-          color: #000;
-        }
-      }
-    }
+    
     .input_content {
       display: flex;
       flex-direction: column;
@@ -1101,10 +1034,31 @@ section.content {
           input {
             height: 38px;
           }
+          input.ant-input {
+            border: 2px solid $main_color;
+            border-radius: 30px;
+            height: 40px;
+            width: 300px;
+          }
           span.ant-input-password {
             height: 40px;
-            padding: 0 11px;
+            padding: 0;
+            border: none;
+            position: relative;
           }
+          span.ant-input-suffix {
+            position: absolute;
+            top: 20%;
+            right: 15px;
+          }
+        }
+      }
+      .ant-form-item-label {
+        label {
+          font-size: 22px;
+          color: $main_color;
+          font-family: "Exo 2", sans-serif;
+          font-weight: 600;
         }
       }
       p {
@@ -1151,7 +1105,9 @@ section.content {
         button:hover {
           cursor: pointer;
           background: #fff;
-          color: $second_main_color;
+          span {
+            color: $second_main_color;
+          }
         }
       }
     }

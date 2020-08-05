@@ -23,16 +23,6 @@ const input = () => {
       <SectionWrap>
         <div className="input_content">
           <p className="title">Вход</p>
-
-          {/* <form action="">
-            <div className="inp_wrap">
-              <input type="email" placeholder="Email" required />
-              <input type="password" placeholder="Пароль" required />
-              <a href="forgotPassword.html">Забыли пароль?</a>
-            </div>
-
-            <button type="submit">Войти</button>
-          </form> */}
           <Form
             {...layout}
             name="basic"

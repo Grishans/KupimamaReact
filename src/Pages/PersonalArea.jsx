@@ -51,7 +51,7 @@ const PersonalArea = () => {
             <div className="paci_text">
               <Link to="myPurchases">История покупок</Link>
               <Link to="editProfile">Редактировать профиль</Link>
-              <a href="basket.html">Корзина</a>
+              <Link to="basket">Корзина</Link>
             </div>
           </div>
         </div>
