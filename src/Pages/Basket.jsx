@@ -132,6 +132,7 @@ const Basket = () => {
             dataSource={data}
             bordered={true}
             pagination={false}
+            scroll={{ x: 900 }}
           />
 
           <div className="pc_deliver">

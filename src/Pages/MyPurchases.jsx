@@ -1,8 +1,94 @@
 import React from "react";
 
-import { Headers, Footer, SectionWrap } from "../components";
+import { Table, Space, InputNumber, Menu, Dropdown } from "antd";
+import { DownOutlined } from "@ant-design/icons";
+
+import { Link } from "react-router-dom";
+
+import { Headers, Footer, SectionWrap, Pagination } from "../components";
 
 const MyPurshaases = () => {
+  const columns = [
+    {
+      title: "№",
+      dataIndex: "number",
+      key: "number",
+      align: "center",
+    },
+    {
+      title: "Фото",
+      dataIndex: "photo",
+      key: "photo",
+      align: "center",
+      render: () => (
+        <Space>
+          <img src="img/stroller.jpg" alt="" />
+        </Space>
+      ),
+    },
+    {
+      title: "Количество",
+      dataIndex: "quantity",
+      key: "quantity",
+      align: "center",
+    },
+    {
+      title: "Цена за шт.",
+      dataIndex: "price",
+      key: "price",
+      align: "center",
+    },
+    {
+      title: "Название товара",
+      dataIndex: "name",
+      key: "name",
+      align: "center",
+    },
+    {
+      title: "Суммарная стоимость",
+      dataIndex: "sumPrice",
+      key: "sumPrice",
+      align: "center",
+    },
+    {
+      title: "",
+      dataIndex: "btn",
+      key: "btn",
+      align: "right",
+      render: () => (
+        <Space size="middle">
+          <Link to="Basket">В магазин</Link>
+        </Space>
+      ),
+    },
+  ];
+
+  const data = [
+    {
+      number: "1",
+
+      quantity: "12 шт.",
+      price: "12000 р.",
+      name: "Коляска",
+      sumPrice: "50000 р.",
+    },
+    {
+      number: "2",
+
+      quantity: "12 шт.",
+      price: "12000 р.",
+      name: "Коляска",
+      sumPrice: "50000 р.",
+    },
+    {
+      number: "3",
+
+      quantity: "12 шт.",
+      price: "12000 р.",
+      name: "Коляска",
+      sumPrice: "50000 р.",
+    },
+  ];
   return (
     <>
       <Headers />
@@ -10,91 +96,16 @@ const MyPurshaases = () => {
         <div className="myPurch_content">
           <p className="title">Мои покупки</p>
 
-          <table>
-            <tr>
-              <th>№</th>
-              <th>Фото товара</th>
-              <th>Кол-во</th>
-              <th>Цена за шт.</th>
-              <th>Название товара</th>
-              <th>Суммарная стоимость</th>
-              <th></th>
-            </tr>
-            <tr>
-              <th>1</th>
-              <th>
-                <img src="img/stroller.jpg" alt="" />
-              </th>
-              <th>30шт.</th>
-              <th>15000р.</th>
-              <th>Коляска бирюзовая</th>
-              <th>450000р.</th>
-              <th>
-                <a href="#">В магазин</a>
-              </th>
-            </tr>
-            <tr>
-              <th>2</th>
-              <th>
-                <img src="img/stroller.jpg" alt="" />
-              </th>
-              <th>30шт.</th>
-              <th>15000р.</th>
-              <th>Коляска бирюзовая</th>
-              <th>450000р.</th>
-              <th>
-                <a href="#">В магазин</a>
-              </th>
-            </tr>
-            <tr>
-              <th>3</th>
-              <th>
-                <img src="img/stroller.jpg" alt="" />
-              </th>
-              <th>30шт.</th>
-              <th>15000р.</th>
-              <th>Коляска бирюзовая</th>
-              <th>450000р.</th>
-              <th>
-                <a href="#">В магазин</a>
-              </th>
-            </tr>
-            <tr>
-              <th>4</th>
-              <th>
-                <img src="img/stroller.jpg" alt="" />
-              </th>
-              <th>30шт.</th>
-              <th>15000р.</th>
-              <th>Коляска бирюзовая</th>
-              <th>450000р.</th>
-              <th>
-                <a href="#">В магазин</a>
-              </th>
-            </tr>
-            <tr>
-              <th>5</th>
-              <th>
-                <img src="img/photo.png" alt="" />
-              </th>
-              <th>30шт.</th>
-              <th>15000р.</th>
-              <th>Коляска бирюзовая</th>
-              <th>450000р.</th>
-              <th>
-                <a href="#">В магазин</a>
-              </th>
-            </tr>
-          </table>
+          <Table
+            columns={columns}
+            dataSource={data}
+            bordered={true}
+            pagination={false}
+            scroll={{ x: 900 }}
+          />
 
           <div className="next_page">
-            <a href="#" className="np_arrow_perw"></a>
-            <a href="#">1</a>
-            <a href="#">2</a>
-            <a href="#">3</a>
-            <a href="#">...</a>
-            <a href="#">5</a>
-            <a href="#" className="np_arrow_next"></a>
+            <Pagination />
           </div>
         </div>
       </SectionWrap>

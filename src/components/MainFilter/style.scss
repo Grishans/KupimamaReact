@@ -24,6 +24,8 @@
     align-items: center;
     .for_boy {
       margin-right: 20px;
+      display: flex;
+      align-items: center;
       input {
         display: none;
       }
@@ -48,6 +50,8 @@
       }
     }
     .for_girl {
+      display: flex;
+      align-items: center;
       input {
         display: none;
       }
@@ -98,5 +102,158 @@
     -moz-border-radius-bottomleft: 20px;
     -webkit-border-bottom-left-radius: 20px;
     border-bottom-left-radius: 20px;
+  }
+}
+
+@media screen and (min-width: 1800px) {
+  .main_content {
+    .mc_sort {
+      .mcs_bg {
+        form {
+          label {
+            font-size: 25px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  .mc_sort {
+    .mcs_bg {
+      label {
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1250px) {
+  .mc_sort {
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 140px;
+    .ant-dropdown-link {
+      margin-right: 20px;
+    }
+  }
+}
+
+@media all and (max-width: 920px) {
+  .mcs_sort {
+    width: 100%;
+    justify-content: center;
+    margin-bottom: 20px;
+    .mcs_bg {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      flex-direction: row;
+      justify-content: center;
+      width: 100%;
+      .for_boy,
+      .for_girl {
+        height: 60px;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 710px) {
+  .mc_sort {
+    width: 100%;
+    flex-direction: column;
+    height: unset;
+    .ant-dropdown-link {
+      width: 80%;
+      height: 60px;
+      margin-bottom: 20px;
+      font-size: 26px;
+      margin-right: 0;
+    }
+    .mcs_bg {
+      margin-top: 20px;
+      margin-bottom: 20px;
+      flex-direction: row;
+      justify-content: center;
+      .for_boy,
+      .for_girl {
+        height: 60px;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 550px) {
+  .mc_sort {
+    .ant-dropdown-link {
+      font-size: 22px;
+    }
+    .mcs_bg {
+      margin-top: 20px;
+      .for_boy,
+      .for_girl {
+        height: 60px;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 450px) {
+  .mc_sort {
+    margin-bottom: 0;
+    .ant-dropdown-link {
+      font-size: 18px;
+    }
+    .mcs_bg {
+      margin-top: 20px;
+      .for_boy,
+      .for_girl {
+        height: 60px;
+        margin: 0 10px;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 380px) {
+  .mc_sort {
+    .ant-dropdown-link {
+      font-size: 20px;
+    }
+    .mcs_bg {
+      .for_boy,
+      .for_girl {
+        label {
+          padding: 10px 20px;
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 360px) {
+  .mc_sort {
+    .ant-dropdown-link {
+      font-size: 16px;
+    }
+  }
+}
+
+@media all and (max-width: 320px) {
+  .mc_sort {
+    .mcs_bg {
+      margin-top: 20px;
+      .for_boy,
+      .for_girl {
+        label {
+          font-size: 18px;
+        }
+      }
+    }
   }
 }

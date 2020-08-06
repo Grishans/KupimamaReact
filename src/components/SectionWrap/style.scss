@@ -7,3 +7,11 @@ section.content {
     width: 90%;
   }
 }
+
+@media all and (max-width: 920px) {
+  section.content {
+    .cont_wrap {
+      width: 96%;
+    }
+  }
+}

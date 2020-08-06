@@ -134,3 +134,111 @@ header {
     display: none;
   }
 }
+
+@media screen and (min-width: 1650px) {
+  header {
+    .nav {
+      .nav_wrap {
+        ul {
+          a {
+            li {
+              font-size: 25px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 920px) {
+  header {
+    .topNav {
+      justify-content: space-around;
+      a {
+        font-size: 22px;
+        padding: 0;
+      }
+    }
+    .headers {
+      flex-direction: column;
+      height: auto;
+      .headers_logo {
+        align-self: center;
+        margin-bottom: 30px;
+      }
+      .headers_contacts {
+        margin-bottom: 20px;
+        p {
+          text-align: center;
+        }
+      }
+      .headers_search {
+        width: 90%;
+        margin-bottom: 20px;
+      }
+      .headers_input {
+        margin-bottom: 20px;
+      }
+    }
+    .nav_mobil {
+      display: block;
+      .nav_wrap_mobil {
+        display: none;
+        min-width: 100%;
+        ul {
+          flex-direction: column;
+          width: 100%;
+          height: fit-content;
+          a {
+            width: 100%;
+            height: auto;
+            margin-bottom: 10px;
+            li {
+              font-size: 30px;
+            }
+          }
+        }
+        .nav_toogle_mobil {
+          input.toogleMobilback:checked ~ .nt_wrap {
+            display: none;
+          }
+          input.toogleMobilback:checked ~ .toogleMobil {
+            display: none;
+          }
+        }
+        .nav_toogle_mobil {
+          display: none;
+        }
+      }
+      input.mobilCheck:checked ~ .nav_wrap_mobil {
+        display: flex;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 700px) {
+  header {
+    .topNav {
+      justify-content: space-around;
+      a {
+        font-size: 18px;
+        padding: 0;
+      }
+    }
+  }
+}
+
+@media all and (max-width: 550px) {
+  header {
+    .topNav {
+      justify-content: space-around;
+      flex-wrap: wrap;
+      a {
+        font-size: 18px;
+        padding: 0;
+      }
+    }
+  }
+}

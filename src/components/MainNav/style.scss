@@ -5,6 +5,9 @@
   display: flex;
   justify-content: center;
   margin-top: 5px;
+  .nav_wrap_mobil {
+    display: none;
+  }
   .nav_wrap {
     position: relative;
     width: 90%;
@@ -91,6 +94,22 @@
             color: $second_main_color;
           }
         }
+      }
+    }
+  }
+}
+
+@media all and (max-width: 920px) {
+  .nav {
+    .nav_wrap {
+      display: none;
+    }
+    .nav_wrap_mobil {
+      display: block;
+      transition: all 0.3s;
+
+      span {
+        color: #000;
       }
     }
   }

@@ -79,3 +79,31 @@ footer {
     }
   }
 }
+
+@media all and (max-width: 920px) {
+  footer {
+    padding: 10px;
+    flex-direction: column;
+    .line {
+      border-right: none;
+      height: 0;
+    }
+    .f_sn {
+      width: 100%;
+    }
+    .f_nav {
+      width: 100%;
+      .fn_nav {
+        width: 100%;
+        flex-direction: row;
+        justify-content: center;
+      }
+    }
+    .f_inf {
+      width: 100%;
+      p {
+        text-align: center;
+      }
+    }
+  }
+}
